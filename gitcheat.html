@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body {background-color: White;}
+  h1  {color: blue, font-family: Arial;}
+  p   {color:green, font-family: Arial;}
+  </style>
+</head>
+<body>
+
+<h1> Configure tooling</h1>
+<p> git config --global user.name "[name]": Sets the name you want attached to your commit transactions.
+  <br>git config --global user.email "[email address]": Sets the emial you want attached to your commit transactions.
+  <br>git config --global color.ui auto: Enables helpful colorization of command line output
+</p>
+
+<h1> Creating repositories</h1>
+<p>git init [project-name]: creates a new local repositoy with the specified name.
+  <br>git clone [url]: Downloads a project and its entire version history.
+</p>
+
+<h1> Make Changes</h1>
+<p>git status: lists all new or modified files to be committed
+  <br>git diff: shows file differences not yet staged
+  <br>git add [file]:Snapshots the file in preparation for versioning
+  <br>git diff --staged: Shows file differences between staging and the lsat file verison
+  <br>git reset [file]: Unstages the file, but preserve its contents
+  <br>git commit -m [message]: Records file snapshots permanently in version history
+</p>
+
+<h1> Group changes</h1>
+<p>git branch: Lists all local branches in the current repository
+  <br>git branch [branch-name]: Creates a new branch
+  <br>git checkout[branch-name]: Switches to the specified branch and updates the working directory
+  <br>git merge[branch]: Combines the specified branch's history into the current branch
+  <br>git branch -d [branch-name]: Deletes the specified branches
+</p>
+
+<h1>Refactor filenames</h1>
+<p>git rm [file]: Deletes the file from the working directory and stages the deletion
+  <br>git rm --cached [file]: Removes the file from version control but preserves the file locally
+  <br> git mv [file-original] [file-renamed]:Changes the file name and prepares it for commit
+</p>
+
+<h1>Review history</h1>
+<p> git log: Lists version history for the current branch
+ <br>git log --follow [file]: Lists version history for a file, including renames
+ <br>git diff [first-branch]...[second-branch]: Shows content differences between two branches
+ <br>git show [commit]: Outputs metadata and content changes of the specified commit
+</p>
+
+<h1>Redo Commits</h1>
+<p>git reset [commit]:Undoes all commits after [commit], preserving changes locally
+  <br> git reset --hard [commit]:Discards all history and changes back to the specified commit
+</p>
+
+<h1>Save fragments</h1>
+<p>git stash: Temporarily stores all modified tracked files
+  <br>git stash pop: Restores the most recently stashed files
+  <br>git stash list: Lists all stashed changesets
+  <br>git stash drop: Discards the most recently stashed changeset
+</p>
+
+<h1>Synchronize changes</h1>
+<p>git fetch [bookmark]: Downloads all history from the repository bookmark
+  <br>git merge [bookmark]/[branch]: Combines bookmark’s branch into current local branch
+  <br>git push [alias] [branch]: Uploads all local branch commits to GitHub
+  <br>git pull: Downloads bookmark history and incorporates changes
+</p>
+
+
+</body>
+
+</html>
